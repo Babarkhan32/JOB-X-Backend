@@ -1,0 +1,44 @@
+Guidelines for making a PR:
+1- PR should be small and concise.
+2- Title should explain the purpose of the PR
+3- Description should be included: stating the problem
+4- Notes should be included: stating the solution that a developer has provided
+
+YOU CAN NOT MERGE IF:
+1-  A broken build which typically means that unit and or integration tests are not passing.
+2- Comments asking for clarification that have not been addressed.
+3- An explicit request to not merge.
+4- A PR that was explicitly identified as a “work in progress”.
+
+
+Guidelines for writing React code.
+1- If typeScript is not used one must use PropTypes for every component that is being developed, Clearly stating what props the component will recieve
+2- Split larger components into small components, Most component files should not exceed 250 lines. Under 100 is ideal. Keep your components small.
+3-  Please make sure to create deep clone copies of object rather than shallow copies
+4- What if you don’t know how deep the nested structures are? It can be very tedious to manually go through big objects and copy every nested object by hand. There is a way to copy everything without thinking. You simply stringify your object and parse it right after.
+5- Your filenames should always have consistent casing and extension. Either use .js or .jsx as explained in code structure for extensions. And PascalCase or camelCase for filenames.
+6- In React, name your file the same as the React component inside that file i.e. without a hyphen in the filename. For example: RegistrationForm → ✔️.
+7- Not only filename but also make sure that your variables/functions/modules filenames are consistent with cases.
+8- Use well-descriptive names for variables/functions/modules/Actions, keeping in mind that it is application-specific so that even a third party or new developer can easily understand you code.
+9- It's bad to use the underscore prefix ( _ ) for a React component's internal methods because underscore prefixes seem to be used as a convention in other languages to denote private objects or variables. But everything in JavaScript is public. And there is no native support for privacy. So, even if you add underscore prefixes to your properties, It'll not make them private. _onClickSubmit()
+10- Talking about cases in a React component, use PascalCase for the same — and for their instances, use camelCase -> import  LoginForm from loginForm
+11- Use the DRY principle (Don't repeat yourself).
+12- Clean code is self-commenting(using the right variable names and function names). Yet if something is complex then comments only to explain.
+13- Putting imports in an order
+ a. React import
+b. Library imports (Alphabetical order)
+c. Absolute imports from the project (Alphabetical order)
+d. Import * as
+e. Import ‘./<some file>.<some extension>
+Each kind should be separated by an empty line. This makes your imports clean and easy to understand for all the components, 3rd-party libraries, and etc.
+14) Be careful with exhaustive dependencies of useEffect.
+15) Wrap functions carefully in useCallBack, while consider useMemo for variables after evaluating performance cost.
+16) Do not initialise a variable that is not needed.
+17) Destructuring props should strickly be followed up for better readability.
+
+Guidelines for Generic code approach.
+
+1- K.I.S.S. (Keep It Simple, Stupid), Any logic in your way should follow easy and simple steps. Whenever you write some code, try to think simple.
+2- Ninety-ninety rule ( failure to anticipate the hard parts), The first 90 percent of the code accounts for the first 90 percent of the development time. The remaining 10 percent of the code accounts for the other 90 percent of the development time.
+3- D.R.Y (Do not repeat yourself), reuse your logic as much as you can.
+4- S.O.C Separation of concerns. Every function should only be doing one job at a time: For another concern, a new function should be introduce.
