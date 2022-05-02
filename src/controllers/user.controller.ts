@@ -131,7 +131,10 @@ export class UserController {
     console.log(isPasswordValid)
     if (isPasswordValid) {
       const token = await this.jwtService.generateToken(result?._id);
-      return {token};
+      // @ts-ignore
+      delete result?.password; 
+      
+      return {token,userData:result};
     }
 
     return response.status(401).json({message: 'Unauthorized'});

@@ -5,4 +5,5 @@ tslib_1.__exportStar(require("./file-upload.controller"), exports);
 tslib_1.__exportStar(require("./ping.controller"), exports);
 tslib_1.__exportStar(require("./user.controller"), exports);
 tslib_1.__exportStar(require("./jobs.controller"), exports);
+tslib_1.__exportStar(require("./gigs.controller"), exports);
 //# sourceMappingURL=index.js.map

@@ -54,7 +54,9 @@ let UserController = class UserController {
         console.log(isPasswordValid);
         if (isPasswordValid) {
             const token = await this.jwtService.generateToken(result === null || result === void 0 ? void 0 : result._id);
-            return { token };
+            // @ts-ignore
+            result === null || result === void 0 ? true : delete result.password;
+            return { token, userData: result };
         }
         return response.status(401).json({ message: 'Unauthorized' });
         // convert a User object into a UserProfile object (reduced set of properties)
