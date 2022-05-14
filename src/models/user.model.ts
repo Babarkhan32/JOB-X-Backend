@@ -14,6 +14,13 @@ export class User extends Entity {
   })
   password: string;
 
+
+  @property({
+    type: 'array',
+    required: true,
+  })
+  categories: [];
+
   @property({
     type: 'string',
 

@@ -26,6 +26,12 @@ export class Jobs extends Entity {
   jobposter: object;
 
   @property({
+    type: 'number',
+    required: true,
+  })
+  budget: number;
+
+  @property({
     type: 'string',
     required: true,
   })
@@ -48,6 +54,19 @@ export class Jobs extends Entity {
     required: true,
   })
   status: string;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  jobType: string;
+
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  jobCategory: string;
 
   @property({
     type: 'array',
