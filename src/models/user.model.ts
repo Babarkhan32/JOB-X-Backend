@@ -40,6 +40,26 @@ export class User extends Entity {
   media: Object;
 
   @property({
+    type: 'number',
+    required: true,
+  })
+  buyerFulfilmentRate: number;
+
+  @property({
+    type: 'number',
+    required: true,
+  })
+  sellerFulfilmentRate: number;
+
+
+  @property({
+    type: 'boolean',
+    required: true,
+  })
+  isAgreementSigned: boolean;
+
+
+  @property({
     type: 'any',
     id: true,
     generated: true,

@@ -27,6 +27,8 @@ export class Gigs extends Entity {
   })
   budget: string;
 
+  
+
   @property({
     type: 'array',
     itemType: 'string',
