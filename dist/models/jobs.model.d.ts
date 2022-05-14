@@ -4,10 +4,13 @@ export declare class Jobs extends Entity {
     jobasignee?: object;
     jobmedia?: object;
     jobposter: object;
+    budget: number;
     title: string;
     description: string;
     deadline: string;
     status: string;
+    jobType: string;
+    jobCategory: string;
     tags?: string[];
     jobapplicants?: string[];
     [prop: string]: any;

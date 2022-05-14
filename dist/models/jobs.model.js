@@ -37,6 +37,13 @@ tslib_1.__decorate([
 ], Jobs.prototype, "jobposter", void 0);
 tslib_1.__decorate([
     (0, repository_1.property)({
+        type: 'number',
+        required: true,
+    }),
+    tslib_1.__metadata("design:type", Number)
+], Jobs.prototype, "budget", void 0);
+tslib_1.__decorate([
+    (0, repository_1.property)({
         type: 'string',
         required: true,
     }),
@@ -63,6 +70,20 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], Jobs.prototype, "status", void 0);
+tslib_1.__decorate([
+    (0, repository_1.property)({
+        type: 'string',
+        required: true,
+    }),
+    tslib_1.__metadata("design:type", String)
+], Jobs.prototype, "jobType", void 0);
+tslib_1.__decorate([
+    (0, repository_1.property)({
+        type: 'string',
+        required: true,
+    }),
+    tslib_1.__metadata("design:type", String)
+], Jobs.prototype, "jobCategory", void 0);
 tslib_1.__decorate([
     (0, repository_1.property)({
         type: 'array',

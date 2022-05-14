@@ -36,7 +36,7 @@ tslib_1.__decorate([
         required: true,
     }),
     tslib_1.__metadata("design:type", String)
-], Gigs.prototype, "price", void 0);
+], Gigs.prototype, "budget", void 0);
 tslib_1.__decorate([
     (0, repository_1.property)({
         type: 'array',

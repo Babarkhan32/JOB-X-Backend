@@ -17,9 +17,10 @@ export class User extends Entity {
 
   @property({
     type: 'array',
+    itemType: 'string',
     required: true,
   })
-  categories: [];
+  categories: string[];
 
   @property({
     type: 'string',

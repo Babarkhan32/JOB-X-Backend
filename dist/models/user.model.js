@@ -24,6 +24,14 @@ tslib_1.__decorate([
 ], User.prototype, "password", void 0);
 tslib_1.__decorate([
     (0, repository_1.property)({
+        type: 'array',
+        itemType: 'string',
+        required: true,
+    }),
+    tslib_1.__metadata("design:type", Array)
+], User.prototype, "categories", void 0);
+tslib_1.__decorate([
+    (0, repository_1.property)({
         type: 'string',
     }),
     tslib_1.__metadata("design:type", String)
@@ -40,6 +48,27 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", Object)
 ], User.prototype, "media", void 0);
+tslib_1.__decorate([
+    (0, repository_1.property)({
+        type: 'number',
+        required: true,
+    }),
+    tslib_1.__metadata("design:type", Number)
+], User.prototype, "buyerFulfilmentRate", void 0);
+tslib_1.__decorate([
+    (0, repository_1.property)({
+        type: 'number',
+        required: true,
+    }),
+    tslib_1.__metadata("design:type", Number)
+], User.prototype, "sellerFulfilmentRate", void 0);
+tslib_1.__decorate([
+    (0, repository_1.property)({
+        type: 'boolean',
+        required: true,
+    }),
+    tslib_1.__metadata("design:type", Boolean)
+], User.prototype, "isAgreementSigned", void 0);
 tslib_1.__decorate([
     (0, repository_1.property)({
         type: 'any',

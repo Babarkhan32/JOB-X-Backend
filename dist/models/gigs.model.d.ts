@@ -3,7 +3,7 @@ export declare class Gigs extends Entity {
     _id?: string;
     title: string;
     description: string;
-    price: string;
+    budget: string;
     tags: string[];
     media?: object;
     user: Object;
