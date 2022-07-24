@@ -126,7 +126,10 @@ export class UserController {
   ): Promise<any> {
    
     const {response} = this.requestCtx;
-    let result = await this.userRepository.findOne({where:{username:credentials.username}})
+    let result = await this.userRepository.findOne({ where: { username: credentials.username } })
+    if (!result) {
+      return response.status(401).json({message:'Unauthorized'})
+    }
     const isPasswordValid = await bcrypt.compare(credentials?.password,result?.password)
     console.log(isPasswordValid)
     if (isPasswordValid) {

@@ -50,6 +50,9 @@ let UserController = class UserController {
     async login(credentials) {
         const { response } = this.requestCtx;
         let result = await this.userRepository.findOne({ where: { username: credentials.username } });
+        if (!result) {
+            return response.status(401).json({ message: 'Unauthorized' });
+        }
         const isPasswordValid = await bcrypt_1.default.compare(credentials === null || credentials === void 0 ? void 0 : credentials.password, result === null || result === void 0 ? void 0 : result.password);
         console.log(isPasswordValid);
         if (isPasswordValid) {
