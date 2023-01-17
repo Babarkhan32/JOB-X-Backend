@@ -54,7 +54,7 @@ let UserController = class UserController {
             return response.status(401).json({ message: 'Unauthorized' });
         }
         const isPasswordValid = await bcrypt_1.default.compare(credentials === null || credentials === void 0 ? void 0 : credentials.password, result === null || result === void 0 ? void 0 : result.password);
-        console.log(isPasswordValid);
+      
         if (isPasswordValid) {
             const token = await this.jwtService.generateToken(result === null || result === void 0 ? void 0 : result._id);
             // @ts-ignore

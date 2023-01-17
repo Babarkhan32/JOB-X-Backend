@@ -22,7 +22,6 @@ import {FileUploadHandler} from '../types';
 })
 export class FileUploadProvider implements Provider<FileUploadHandler> {
   constructor(@config() private options: multer.Options = {}) {
-    console.log("DirName", __dirname)
     if (!this.options.storage) {
       this.options.storage = multer.diskStorage({
         destination: function (req, file, cb) {
@@ -33,24 +32,6 @@ export class FileUploadProvider implements Provider<FileUploadHandler> {
         }
       })
 
-      // Default to in-memory storage
-      // this.options.storage = multer.diskStorage({
-      //   destination: function (req, file, cb) {
-      //     let dest = path.join(__dirname);
-      //     let stat = null;
-      //     try {
-      //       stat = fs.statSync(dest);
-      //     }
-      //     catch (err) {
-      //       fs.mkdirSync(dest);
-      //     }
-      //     if (stat && !stat.isDirectory()) {
-      //       throw new Error('Directory cannot be created');
-      //     }
-      //     console.log("Check your destination", dest)
-      //     cb(null, Date.now() + file.originalname);
-      //   }
-      // });
     }
   }
 

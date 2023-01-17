@@ -131,7 +131,7 @@ export class UserController {
       return response.status(401).json({message:'Unauthorized'})
     }
     const isPasswordValid = await bcrypt.compare(credentials?.password,result?.password)
-    console.log(isPasswordValid)
+  
     if (isPasswordValid) {
       const token = await this.jwtService.generateToken(result?._id);
       // @ts-ignore

@@ -25,24 +25,7 @@ let FileUploadProvider = class FileUploadProvider {
                     cb(null, file.fieldname + '-' + Date.now());
                 }
             });
-            // Default to in-memory storage
-            // this.options.storage = multer.diskStorage({
-            //   destination: function (req, file, cb) {
-            //     let dest = path.join(__dirname);
-            //     let stat = null;
-            //     try {
-            //       stat = fs.statSync(dest);
-            //     }
-            //     catch (err) {
-            //       fs.mkdirSync(dest);
-            //     }
-            //     if (stat && !stat.isDirectory()) {
-            //       throw new Error('Directory cannot be created');
-            //     }
-            //     console.log("Check your destination", dest)
-            //     cb(null, Date.now() + file.originalname);
-            //   }
-            // });
+          
         }
     }
     value() {
